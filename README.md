@@ -1,7 +1,8 @@
-# AUTO PYTHON
+# AUTO PYTHON.
 ## Sistema de controle de veículos. 
 Um sistema robusto e completo que gerencia veículos em uma concessionária. 
-### Funcionalidades:
+
+## Funcionalidades:
 ### Cadastro:
 Vai realizar o cadastro de veículos. Usando o Modelo, Cor, Quilometragem, Ano e Marca. Antes do cadastro o sistema irá validar os dados. 
 

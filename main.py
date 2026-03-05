@@ -101,7 +101,8 @@ while True:
             
     elif int(escolha) == 5: 
         print("Saindo do sistema. Até mais!")
-        break # Quebra o loop While True e encerra o programa.
+        break 
+        # Quebra o loop While True e encerra o programa.
     else:
         print("Opção inválida. Por favor, escolha uma opção de 1 a 5.")   
     

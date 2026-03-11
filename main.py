@@ -78,8 +78,9 @@ while True:
         pass
     
     elif int(escolha) == 3:
-        print("Opção de remoção em desenvolvimento...")
-        pass
+        print( "=" * 30)
+        print("Removendo veículo")
+        
     
     #ESCOLHA 4:   
     elif int(escolha) == 4:

@@ -106,20 +106,44 @@ while True:
         # Quebra o loop While True e encerra o programa.
     else:
         print("Opção inválida. Por favor, escolha uma opção de 1 a 5.")   
-    
-    # Abrimos o terminal para fazer o versionamento do código. 
-    # GIT INIT - para iniciar o repositório local.
-    # GIT ADD . - para adicionar os arquivos ao stage.
-    # GIT STATUS - para verificar o status dos arquivos.
-    # GIT COMMIT -M "Mensagem do commit" - para criar um commit com a mensagem especificada.
-    # GIT LOG - para visualizar o histórico de commits e quem é o autor.
 
-    # Para criar um repositório remoto no GitHub, siga os seguintes passos:
-    # 1. Acesse o GitHub e faça login na sua conta.
-    # 2. Clique no botão "New" para criar um novo repositório.
-    # 3. Preencha o nome do repositório, adicione uma descrição (opcional) e escolha se deseja que o repositório seja público ou privado.
-    # 4. Clique no botão "Create repository" para criar o repositório.
-    # 5. Após criar o repositório, você verá uma página com instruções para conectar seu repositório local ao repositório remoto no GitHub. 
-    # Siga as instruções fornecidas para adicionar o repositório remoto e fazer o push do seu código para o GitHub.
-    # GIT REMOTE ADD ORIGIN <URL do repositório remoto> - para adicionar o repositório remoto.
-    # GIT PUSH -U ORIGIN MAIN - para enviar o código para o repositório remoto no GitHub.
+# ============================================================
+# GUIA DE COMANDOS TERMINAL & GITHUB 
+# ============================================================
+
+# --- COMANDOS DE NAVEGAÇÃO (PARA MÁQUINAS COMPARTILHADAS) ---
+# CD DOCUMENTS             - Entra na pasta Documentos.
+# MKDIR NOME_DA_PASTA      - Cria uma pasta exclusiva para você.
+# CD NOME_DA_PASTA         - Entra na sua pasta pessoal.
+# CD ..                    - Volta uma pasta para trás (sai da pasta atual).
+# CLS                      - Limpa a tela do terminal para tirar a bagunça visual.
+# LS                       - Lista os arquivos para confirmar se está no lugar certo.
+
+# --- VERSIONAMENTO LOCAL (GIT) ---
+# GIT INIT                 - Inicia o repositório local.
+# GIT ADD .                - Adiciona todos os arquivos novos/alterados ao stage.
+# GIT STATUS               - Verifica o que foi alterado e o que está pronto para o commit.
+# GIT COMMIT -M "Mensagem" - Cria uma versão (ponto na história) com uma descrição.
+# GIT LOG                  - Visualiza o histórico de quem mexeu e o que foi feito'.
+# GIT BRANCH -M MAIN       - Garante que você está na ramificação principal (padrã'o atual).
+
+# --- CONEXÃO COM REPOSITÓRIO REMOTO (GITHUB) ---
+# 1. Acesse o GitHub e clique em "New" para criar o repositório.
+# 2. Defina o nome (ex: estudos-python) e clique em "Create repository".
+# 3. Copie a URL (HTTPS) que o GitHub vai gerar.
+
+# GIT REMOTE ADD ORIGIN <URL> - Conecta seu PC ao repositório no GitHub.
+# GIT REMOTE -V                - Verifica se o link do repositório remoto está correto.
+
+# --- SINCRONIZAÇÃO E ENVIO ---
+# GIT PULL ORIGIN MAIN --REBASE - Puxa o que está no GitHub para o PC (evita erros se mexeu em casa).
+# GIT PUSH -U ORIGIN MAIN       - Envia seu código local para o GitHub pela primeira vez.
+# GIT PUSH                      - Envia as atualizações das próximas vezes.
+
+# --- DICA DE OURO: CLONAGEM ---
+# GIT CLONE <URL>          - Baixa um repositório inteiro que já existe no seu GitHub.
+# CODE . -R                - Abre a pasta atual diretamente no VS Code.
+
+# ============================================================
+# LEMBRETE: Sempre dê um PULL antes de começar e um PUSH ao terminar!
+# ============================================================

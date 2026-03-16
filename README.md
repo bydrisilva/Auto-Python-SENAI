@@ -1,4 +1,4 @@
-# AUTO PYTHON - Sistema de Gestão de Concessionária.
+# AUTO PYTHON - Sistema de gestão de concessionária.
 Este projeto foi desenvolvido durante o curso de Python no **SENAI Taguatinga**, com o objetivo de gerenciar o fluxo de entrada, saída e atualização de veículos em uma garagem de forma eficiente e segura.
 ##  Funcionalidades Técnicas
 ### 1. Cadastro com Validação Rigorosa:

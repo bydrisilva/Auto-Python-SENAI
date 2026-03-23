@@ -1,23 +1,41 @@
-# AUTO PYTHON - Sistema de gestão de concessionária.
-Este projeto foi desenvolvido durante o curso de Python no **SENAI Taguatinga**, com o objetivo de gerenciar o fluxo de entrada, saída e atualização de veículos em uma garagem de forma eficiente e segura.
-##  Funcionalidades Técnicas
-### 1. Cadastro com Validação Rigorosa:
-O sistema não aceita qualquer dado. Ele garante a integridade da base de dados através de:
-* **Limite de Ano:** Só são aceitos veículos fabricados a partir de 2016.
-* **Validação Numérica:** Impede o cadastro de quilometragem ou anos negativos.
-* **Campos Obrigatórios:** Utiliza o método `.strip()` para garantir que nenhum campo (Modelo, Cor, Marca, Placa) fique vazio ou contenha apenas espaços.
-### 2. Atualização de Dados (Em desenvolvimento)
-Permite a alteração de informações de veículos já cadastrados, mantendo as mesmas regras de validação do cadastro inicial.
-### 3. Remoção Inteligente:
-A exclusão é feita através da **Placa** do veículo (identificador único). O sistema percorre a lista, localiza o dicionário correspondente e utiliza o método `.remove()` para atualizar o estoque.
-### 4. Listagem e Visualização:
-Exibe todos os veículos presentes na garagem de forma formatada. Caso a garagem esteja vazia, o sistema informa o usuário através de uma verificação de lista (`if not garagem`).
-## Tecnologias Utilizadas:
-* **Python 3.x**
-* **Dicionários e Listas:** Para estruturação complexa de dados.
-* **Estruturas de Repetição:** `while True` para o menu e `for...in` para buscas.
-* **Tratamento de Strings:** Métodos de limpeza e formatação de dados.
-## Como Executar o Projeto:
-1. Clone o repositório em sua máquina:
+# AUTO PYTHON - Sistema de Gestão de Concessionária
+
+Este projeto consiste em um sistema de gerenciamento de inventário para concessionárias, desenvolvido em Python. O software permite o controle de entrada, saída e manutenção de dados de veículos, garantindo a organização e a integridade das informações através de uma interface de terminal.
+
+O projeto foi desenvolvido como parte das atividades práticas no SENAI Taguatinga, integrando conceitos de Engenharia de Software aplicados na UCB (Universidade Católica de Brasília).
+
+## Funcionalidades Técnicas
+
+### 1. Cadastro com Validação de Dados
+O sistema implementa regras de negócio para assegurar a qualidade dos dados inseridos:
+* **Validação de Ano:** Restrição de cadastro para veículos fabricados a partir de 2016 (ou 2000, conforme configuração local).
+* **Integridade Numérica:** Verificação de valores negativos para quilometragem e ano, interrompendo o registro em caso de inconsistência.
+* **Tratamento de Strings:** Utilização do método `.strip()` para evitar campos vazios ou preenchidos apenas com espaços.
+
+### 2. Atualização Dinâmica de Registros
+Permite a modificação individual de cada atributo do veículo (modelo, cor, km, ano, marca e placa). 
+* **Lógica de Preservação:** Caso o usuário não deseje alterar um campo específico, o sistema permite manter o valor original ao pressionar "Enter".
+* **Mapeamento por Índice:** Utiliza o método `.index()` para localizar a posição exata do objeto na memória antes da alteração.
+
+### 3. Remoção por Identificador Único
+A exclusão de veículos é realizada através da placa. O sistema executa uma busca linear na lista de dicionários e utiliza o método `.remove()` ao localizar a correspondência exata.
+
+### 4. Listagem e Monitoramento de Pátio
+Exibição formatada de todos os veículos disponíveis. O sistema inclui uma verificação de estado (`if not garagem`) para informar o usuário caso o inventário esteja vazio.
+
+## Destaques de Implementação
+* **Variável de Ambiente (Ambiente de Teste):** O código possui uma variável de controle (`prod`) que, quando configurada como `False`, carrega automaticamente uma base de dados fictícia (Uno, Opala, Fuscão) para agilizar os testes de desenvolvimento.
+* **Estrutura de Dados Complexa:** Utilização de uma lista global contendo múltiplos dicionários, simulando o comportamento de uma tabela de banco de dados (CRUD).
+
+
+
+## Tecnologias Utilizadas
+* Linguagem: Python 3.x.
+* Estruturas de Dados: Listas e Dicionários.
+* Lógica de Programação: Estruturas de repetição (`while`, `for`) e condicionais compostas.
+
+## Instruções para Execução
+
+1. Clone o repositório para o seu diretório local:
    ```bash
-   git clone [https://github.com/bydrisilva/Auto-Python-SENAI.git](https://github.com/bydrisilva/Auto-Python-SENAI.git).
+   git clone [https://github.com/bydrisilva/Auto-Python-SENAI.git](https://github.com/bydrisilva/Auto-Python-SENAI.git)

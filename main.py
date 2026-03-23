@@ -15,7 +15,7 @@ else:
 
 #2. CRIAR O MENU DE OPÇÕES PARA O USUÁRIO INTERAGIR COM O SISTEMA.
 while True:
-    # WHILE TRUE cria um loop infinito para o menu sempre voltar.
+    # WHILE TRUE cria um loop infinito para o menu sempre voltar. Se rodar o código sem um laço, ele executa e fecha.
     # Para sair, escolha 5 que ativará o BREAK (no final do código).
     print("Bem-vindo ao sistema de gerenciamento de garagem!\nVamos começar?")
     print(" 1. Cadastrar veículo")
@@ -46,7 +46,8 @@ while True:
         km = input("Digite a quilometragem do veículo: ")
         ano = input("Digite o ano do veículo: ")
         marca = input("Digite a marca do veículo: ")
-        placa = input("Digite a placa do veículo: ")  
+        placa = input("Digite a placa do veículo: ")
+        # Criamos as variáveis para "segurar" o que o usuário digita.
         # INDENTAÇÃAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO!!!! TAB TAB TAB TAB.
         # Tudo aqui está dentro do IF lá de cima.
 
@@ -71,6 +72,7 @@ while True:
             continue # Em vez de exit(), usamos continue para o programa não fechar na cara do usuário.
             
         veiculo = {
+        #Pegamos as variáveis soltas e as organiza em uma "ficha" (Dicionário).
             "modelo": modelo,   
             "cor": cor,
             "km": km,
@@ -81,11 +83,11 @@ while True:
         # {} é um dicionário. 
         # {} usa chave - valor. ex: "modelo": "intruder", "cor": "azul". É usado "" e :.
         garagem.append(veiculo)
+        # Colocamos a ficha dentro da lista.
         
         print(f"Veículo {veiculo['modelo']} cadastrado com sucesso!")
         
     elif int(escolha) == 2:
-        # --- CÓDIGO DO PROFESSOR ADICIONADO AQUI ---
         print("=" * 10)
         print("Alterando dados do veiculo..")
         placa = input("Digite a placa do veiculo: ")
@@ -102,7 +104,6 @@ while True:
             print("Veiculo não encontrado.")
     
     elif int(escolha) == 3:
-        # --- CÓDIGO DO PROFESSOR ADICIONADO AQUI ---
         print("=" * 10)
         print("Removendo veiculo..")
         placa = input("Digite a placa do veiculo: ")
@@ -114,7 +115,8 @@ while True:
         else:
             print("Veiculo não encontrado!")
         
-    #ESCOLHA 4:   
+    #ESCOLHA 4:
+    # O programa verifica se o estacionamento está vazio.   
     elif int(escolha) == 4:
         print("\nListando veículos cadastrados:")
         # O len(garagem) == 0 conta quantos itens tem na lista. Se for 0, está vazia.

@@ -1,6 +1,17 @@
-# 1. CRIAR VARÍAVEL GARAGEM PARA GUARDAR OS VEÍCULOS CADASTRADOS.
-garagem = []
-# [] é uma lista. Guarda cada carro cadastrado.
+# Se o sistema estiver em ambiente de produção mude para True.
+# Deixando em False, ele já carrega o Uno, Opala e Fuscão do professor para facilitar seus testes!
+prod = False 
+
+if prod == False:
+    garagem = [
+        {"modelo": "Uno", "cor": "Branco", "km": "0", "ano": "2016", "marca": "Fiat", "placa": "ABC1234"},
+        {"modelo": "Opala 74", "cor": "Cinza", "km": "200", "ano": "2018", "marca": "Chevrolet", "placa": "XYZ2026"},
+        {"modelo": "Fuscão", "cor": "Preto", "km": "120000", "ano": "2020", "marca": "Volkswagen", "placa": "ABC1234"}
+    ]
+else:
+    # 1. CRIAR VARÍAVEL GARAGEM PARA GUARDAR OS VEÍCULOS CADASTRADOS.
+    garagem = []
+    # [] é uma lista. Guarda cada carro cadastrado.
 
 #2. CRIAR O MENU DE OPÇÕES PARA O USUÁRIO INTERAGIR COM O SISTEMA.
 while True:
@@ -74,14 +85,35 @@ while True:
         print(f"Veículo {veiculo['modelo']} cadastrado com sucesso!")
         
     elif int(escolha) == 2:
-        print("Opção de atualização em desenvolvimento...")
-        pass
+        # --- CÓDIGO DO PROFESSOR ADICIONADO AQUI ---
+        print("=" * 10)
+        print("Alterando dados do veiculo..")
+        placa = input("Digite a placa do veiculo: ")
+        for veiculo in garagem:
+            if veiculo["placa"] == placa:
+                index = garagem.index(veiculo)
+                for chave, valor in veiculo.items():
+                    print("-" * 10)
+                    novo_valor = input(f"Escolha um novo valor para {chave} (valor atual: {valor}): ")
+                    if novo_valor.strip() != "":
+                        garagem[index][chave] = novo_valor                
+                break
+        else:
+            print("Veiculo não encontrado.")
     
     elif int(escolha) == 3:
-        print( "=" * 30)
-        print("Removendo veículo")
+        # --- CÓDIGO DO PROFESSOR ADICIONADO AQUI ---
+        print("=" * 10)
+        print("Removendo veiculo..")
+        placa = input("Digite a placa do veiculo: ")
+        for veiculo in garagem:
+            if veiculo["placa"] == placa:
+                garagem.remove(veiculo)
+                print("Veiculo removido com sucesso!")
+                break
+        else:
+            print("Veiculo não encontrado!")
         
-    
     #ESCOLHA 4:   
     elif int(escolha) == 4:
         print("\nListando veículos cadastrados:")
@@ -98,6 +130,7 @@ while True:
                 print(f"Cor: {veiculo['cor']}")           
                 print(f"Marca: {veiculo['marca']}")
                 print(f"Ano: {veiculo['ano']}")
+                print(f"Placa: {veiculo['placa']}") # Adicionado placa para conferência
                 print("-" * 20)
             
     elif int(escolha) == 5: 
@@ -105,11 +138,13 @@ while True:
         break 
         # Quebra o loop While True e encerra o programa.
     else:
-        print("Opção inválida. Por favor, escolha uma opção de 1 a 5.")   
+        print("Opção inválida. Por favor, escolha uma opção de 1 a 5.")
 
-# ============================================================
-# GUIA DE COMANDOS TERMINAL & GITHUB 
-# ============================================================
+
+
+# ====================================
+# GUIA DE COMANDOS TERMINAL & GITHUB.
+# ====================================
 
 # --- COMANDOS DE NAVEGAÇÃO (PARA MÁQUINAS COMPARTILHADAS) ---
 # CD DOCUMENTS             - Entra na pasta Documentos.

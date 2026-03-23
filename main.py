@@ -12,9 +12,10 @@ else:
     # 1. CRIAR VARÍAVEL GARAGEM PARA GUARDAR OS VEÍCULOS CADASTRADOS.
     garagem = []
     # [] é uma lista. Guarda cada carro cadastrado.
+    # É estrutura que guarda vários itens em uma ordem específica.
 
 #2. CRIAR O MENU DE OPÇÕES PARA O USUÁRIO INTERAGIR COM O SISTEMA.
-while True:
+while True:  
     # WHILE TRUE cria um loop infinito para o menu sempre voltar. Se rodar o código sem um laço, ele executa e fecha.
     # Para sair, escolha 5 que ativará o BREAK (no final do código).
     print("Bem-vindo ao sistema de gerenciamento de garagem!\nVamos começar?")
@@ -118,7 +119,7 @@ while True:
     #ESCOLHA 4:
     # O programa verifica se o estacionamento está vazio.   
     elif int(escolha) == 4:
-        print("\nListando veículos cadastrados:")
+        print("\nListando veículos cadastrados:")    
         # O len(garagem) == 0 conta quantos itens tem na lista. Se for 0, está vazia.
         if len(garagem) == 0:
             # Se o TAMANHO da garagem for igual a 0 (vazia)...

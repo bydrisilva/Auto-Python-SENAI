@@ -141,44 +141,56 @@ while True:
         print("Opção inválida. Por favor, escolha uma opção de 1 a 5.")
 
 
+# =======================================
+# GUIA DEFINITIVO: CICLO DE VIDA DA AULA 
+# =======================================
 
-# ====================================
-# GUIA DE COMANDOS TERMINAL & GITHUB.
-# ====================================
-
-# --- COMANDOS DE NAVEGAÇÃO (PARA MÁQUINAS COMPARTILHADAS) ---
+# --- PASSO 1: CHEGUEI NA MÁQUINA ---
 # CD DOCUMENTS             - Entra na pasta Documentos.
-# MKDIR NOME_DA_PASTA      - Cria uma pasta exclusiva para você.
-# CD NOME_DA_PASTA         - Entra na sua pasta pessoal.
-# CD ..                    - Volta uma pasta para trás (sai da pasta atual).
-# CLS                      - Limpa a tela do terminal para tirar a bagunça visual.
-# LS                       - Lista os arquivos para confirmar se está no lugar certo.
+# MKDIR NOME_DA_PASTA      - Cria sua pasta do dia (ex: adrielle-projetos).
+# CD NOME_DA_PASTA         - Entra na pasta criada.
+# GIT CLONE <URL>          - Baixa seu repositório que já existe no GitHub.
+# LS                       - Lista as pastas para ver o nome do projeto baixado.
+# CD NOME_DO_PROJETO       - ENTRA na pasta do projeto (Obrigatório para o Git funcionar).
+# CODE . -R                - Abre o projeto no VS Code.
 
-# --- VERSIONAMENTO LOCAL (GIT) ---
-# GIT INIT                 - Inicia o repositório local.
-# GIT ADD .                - Adiciona todos os arquivos novos/alterados ao stage.
-# GIT STATUS               - Verifica o que foi alterado e o que está pronto para o commit.
-# GIT COMMIT -M "Mensagem" - Cria uma versão (ponto na história) com uma descrição.
-# GIT LOG                  - Visualiza o histórico de quem mexeu e o que foi feito'.
-# GIT BRANCH -M MAIN       - Garante que você está na ramificação principal (padrã'o atual).
+# --- PASSO 2: SINCRONIZAÇÃO (ANTES DE COMEÇAR) ---
+# GIT PULL ORIGIN MAIN     - Traz atualizações feitas em casa ou em outra máquina.
 
-# --- CONEXÃO COM REPOSITÓRIO REMOTO (GITHUB) ---
-# 1. Acesse o GitHub e clique em "New" para criar o repositório.
-# 2. Defina o nome (ex: estudos-python) e clique em "Create repository".
-# 3. Copie a URL (HTTPS) que o GitHub vai gerar.
+# --- PASSO 3: DESENVOLVIMENTO ---
+# Digite seu código, crie seus arquivos e realize as atividades.
+# CLS                      - Limpa o terminal para tirar a poluição visual.
 
-# GIT REMOTE ADD ORIGIN <URL> - Conecta seu PC ao repositório no GitHub.
-# GIT REMOTE -V                - Verifica se o link do repositório remoto está correto.
+# --- PASSO 4: REVISÃO E STATUS ---
+# GIT STATUS               - Verifica o que você alterou ou criou.
+# GIT LOG                  - Vê o histórico de commits e quem mexeu por último.
 
-# --- SINCRONIZAÇÃO E ENVIO ---
-# GIT PULL ORIGIN MAIN --REBASE - Puxa o que está no GitHub para o PC (evita erros se mexeu em casa).
-# GIT PUSH -U ORIGIN MAIN       - Envia seu código local para o GitHub pela primeira vez.
-# GIT PUSH                      - Envia as atualizações das próximas vezes.
+# --- PASSO 5: FINALIZAÇÃO (ENVIAR PARA O GITHUB) ---
+# GIT ADD .                - Adiciona as mudanças ao "palco" (stage).
+# GIT COMMIT -M "Mensagem" - Carimba a versão com uma descrição do que foi feito.
+# GIT PUSH ORIGIN MAIN     - Sobe tudo para o seu GitHub.
 
-# --- DICA DE OURO: CLONAGEM ---
-# GIT CLONE <URL>          - Baixa um repositório inteiro que já existe no seu GitHub.
-# CODE . -R                - Abre a pasta atual diretamente no VS Code.
+# --- PASSO 6: SAÍDA SEGURA ---
+# CD ..                    - Sai da pasta do projeto.
+# RM -RF NOME_DA_PASTA     - Apaga sua pasta da máquina pública (Cuidado!).
 
-# ============================================================
-# LEMBRETE: Sempre dê um PULL antes de começar e um PUSH ao terminar!
-# ============================================================
+
+# ==============================================
+# CRIANDO UM REPOSITÓRIO DO ZERO (PROJETO NOVO)
+# ==============================================
+
+# 1. NO GITHUB: Clique em "New", dê um nome e clique em "Create repository".
+# 2. NO TERMINAL (Dentro da pasta do seu novo projeto):
+
+# GIT INIT                 - Inicia o Git nesta pasta nova.
+# GIT ADD .                - Adiciona os primeiros arquivos.
+# GIT COMMIT -M "Initial"  - Cria o primeiro commit da história.
+# GIT BRANCH -M MAIN       - Renomeia a ramificação para o padrão 'main'.
+# GIT REMOTE ADD ORIGIN <URL> - Conecta a pasta local ao link do GitHub.
+# GIT REMOTE -V            - Confirma se o link foi colado corretamente.
+# GIT PUSH -U ORIGIN MAIN  - Envia pela primeira vez e conecta as pontas.
+
+
+
+
+
